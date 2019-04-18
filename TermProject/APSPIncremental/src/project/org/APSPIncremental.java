@@ -34,11 +34,7 @@ public class APSPIncremental {
 					if (distance[i][k] != Integer.MAX_VALUE && distance[k][j] != Integer.MAX_VALUE && i!= j && i != k && j !=k) {
 						if (distance[i][j] > distance[i][k] + distance[k][j]) {
 							distance[i][j] = distance[i][k] + distance[k][j];
-							if(parents[i][j] == null) {
-								parents[i][j] = String.valueOf(k);
-							}else {
-								parents[i][j] = parents[k][j] ;
-							}
+							parents[i][j] = parents[k][j] ;
 						}
 					}
 				}
